@@ -1,0 +1,22 @@
+{
+  "name": "my-new-project",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.15.6",
+    "@wdio/cli": "^8.15.6",
+    "@wdio/local-runner": "^8.15.6",
+    "@wdio/mocha-framework": "^8.15.6",
+    "@wdio/spec-reporter": "^8.15.6"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js",
+    "suiteA": "npx wdio run ./wdio.conf.js --suite suiteA",
+    "suiteB": "npx wdio run ./wdio.conf.js --suite suiteB",
+    "firstTest": "npx wdio run ./wdio.conf.js --mochaOpts.grep firstTest",
+    "allureReport": "allure generate allure-results --clean && allure open"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.23.1",
+    "chai": "^4.3.7",
+    "deepmerge": "^4.3.1"
+  }
